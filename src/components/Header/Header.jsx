@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ActiveLink from '../ActiveLink/ActiveLink';
 import { Navbar } from 'react-bootstrap';
 import logo from '../../assets/logo.png'
@@ -31,8 +31,8 @@ const Header = () => {
                <Navbar bg="light" expand="lg" className=' mb-2'>
                     <Container fluid className='container'>
                          <Navbar.Brand href="#" className='fs-4 d-flex align-items-center'>
-                              <img className='logoStyle' src={logo} alt="" />
-                              <h2 className='ms-3'>Arts&Crafts</h2>
+                             <Link className='linkStyle' to={'/'}> 
+                              <h2 className='ms-3 none'>PH Toys Store</h2></Link>
                          </Navbar.Brand>
                          <Navbar.Toggle aria-controls="navbarScroll" />
                          <Navbar.Collapse id="navbarScroll">
@@ -43,14 +43,14 @@ const Header = () => {
                               >
                                    <ActiveLink to="/">Home</ActiveLink>
 
-                                   <ActiveLink to="/allToys">AllToys</ActiveLink>
+                                   <ActiveLink to="/all-toys">All Toys</ActiveLink>
                                    {
                                         (user?.email) &&
-                                        <ActiveLink to="/myToys">MyToys</ActiveLink>
+                                        <ActiveLink to="/my-toys">My Toys</ActiveLink>
                                    }
                                    {
                                         (user?.email) &&
-                                        <ActiveLink to="/addToy">AddToy</ActiveLink>
+                                        <ActiveLink to="/add-toy">Add New</ActiveLink>
                                    }
                                    <ActiveLink to="/blog">Blog</ActiveLink>
 

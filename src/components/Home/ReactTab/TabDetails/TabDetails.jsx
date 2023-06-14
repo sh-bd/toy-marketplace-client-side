@@ -15,7 +15,7 @@ const TabDetails = () => {
                     <h4 className="card-title"><b>Toy name:</b> {name}</h4>
                     <h5 className="card-title"><b>Seller name:</b> {displayName}</h5>
                     <h6><b>Email:</b> {email}</h6>
-                    <p className="card-text"><b>Sub-category:</b> {category}</p>
+                    <p className="card-text"><b>Category:</b> {category}</p>
                     <p className="card-text"><b>Description:</b> {description}</p>
                     <div className=' d-flex'>
                          <div>

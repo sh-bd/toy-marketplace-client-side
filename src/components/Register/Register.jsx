@@ -1,10 +1,10 @@
+import { updateProfile } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai'
+import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { Link, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../AuthProvider/AuthProvider';
-import { sendEmailVerification, updateProfile } from 'firebase/auth';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 
 const Register = () => {
@@ -21,17 +21,17 @@ const Register = () => {
 
      // passwordShown function start 
      const [passwordIcon, setPasswordIcon] = useState(false)
-     const [conformPasswordIcon, setConformPasswordIcon] = useState(false)
+     const [confirmPasswordIcon, setconfirmPasswordIcon] = useState(false)
 
-     const [conformPasswordShown, setConformPasswordShown] = useState(false);
+     const [confirmPasswordShown, setconfirmPasswordShown] = useState(false);
 
      const togglePassword = () => {
           setPasswordShown(!passwordShown);
           setPasswordIcon(!passwordIcon)
      };
-     const toggleConformPassword = () => {
-          setConformPasswordShown(!conformPasswordShown);
-          setConformPasswordIcon(!conformPasswordIcon)
+     const toggleconfirmPassword = () => {
+          setconfirmPasswordShown(!confirmPasswordShown);
+          setconfirmPasswordIcon(!confirmPasswordIcon)
      }
      // passwordShown function end
 
@@ -45,50 +45,59 @@ const Register = () => {
           const photoUrl = form.photoUrl.value;
           const email = form.email.value;
           const password = form.password.value;
-          const conformPassword = form.conformPassword.value;
+          const confirmPassword = form.confirmPassword.value;
 
-          if (password !== conformPassword) {
-               setError("Don't mach this password")
-               return
+          if (password !== confirmPassword) {
+               setError("Password & Confirm Password do not match");
+               return;
+          } else if (password.length < 6) {
+               setError('Please provide more than 6 characters');
+               return;
+          } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+               setError('Please include at least one special character (!@#$%^&*(),.?":{}|<>)');
+               return;
+          } else if (!/[A-Z]/.test(password)) {
+               setError('Please include at least one uppercase letter');
+               return;
+          } else if (!/[a-z]/.test(password)) {
+               setError('Please include at least one lowercase letter');
+               return;
           }
-          else if (password.length < 6) {
-               setError('Please The password is less than 6 characters')
-               return
-          }
+
 
           // Signed up part start
           createUser(email, password)
                .then((userCredential) => {
                     const currentUser = userCredential.user;
-                    setSuccess('Create user account successFull')
+                    setSuccess('Account created successfully')
 
                     // user information post data page start 
-                    const saveUser = {name: name, email: email, password: password}
-                    fetch('https://assignment11-server-site-delta.vercel.app/users',{
+                    const saveUser = { name: name, email: email, password: password }
+                    fetch('http://localhost:5000/users', {
                          method: 'POST',
                          headers: {
-                              'content-type':'application/json'
+                              'content-type': 'application/json'
                          },
                          body: JSON.stringify(saveUser)
                     })
-                    .then(res => res.json())
-                    .then(data => {
-                         if (data.insertedId) {
-                              if (currentUser) {
-                                   Swal.fire({
-                                        title: 'Success!',
-                                        text: 'Register Success !!',
-                                        icon: 'success',
-                                        confirmButtonText: 'Ok'
-                                   })
+                         .then(res => res.json())
+                         .then(data => {
+                              if (data.insertedId) {
+                                   if (currentUser) {
+                                        Swal.fire({
+                                             title: 'Success!',
+                                             text: 'Register Success !!',
+                                             icon: 'success',
+                                             confirmButtonText: 'Ok'
+                                        })
+                                   }
+                                   form.reset()
+                                   // Verification(currentUser)
+                                   navigate('/')
+                                   setEmail('')
+                                   upDataUser(currentUser, name, photoUrl)
                               }
-                              form.reset()
-                              // Verification(currentUser)
-                              navigate('/')
-                              setEmail('') 
-                              upDataUser(currentUser, name, photoUrl)
-                         }
-                    })
+                         })
                     // user information post data page end
                })
                .catch((error) => {
@@ -183,14 +192,14 @@ const Register = () => {
                                    </Form.Group>
 
                                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                                        <Form.Label>Conform Password</Form.Label>
+                                        <Form.Label>confirm Password</Form.Label>
                                         <div className='parentPasswordShow position-relative'>
                                              <div>
-                                                  <Form.Control type={conformPasswordShown ? "text" : "password"} name='conformPassword' placeholder="Conform Password" required />
+                                                  <Form.Control type={confirmPasswordShown ? "text" : "password"} name='confirmPassword' placeholder="confirm Password" required />
                                              </div>
                                              <div className='passwordShow position-absolute'>
-                                                  <p className=' fs-5' onClick={toggleConformPassword}>{
-                                                       conformPasswordIcon ? <AiFillEye /> : <AiFillEyeInvisible />
+                                                  <p className=' fs-5' onClick={toggleconfirmPassword}>{
+                                                       confirmPasswordIcon ? <AiFillEye /> : <AiFillEyeInvisible />
                                                   }</p>
                                              </div>
                                         </div>
@@ -199,10 +208,10 @@ const Register = () => {
                                    <p className=' text-success'>{success}</p>
                                    <div className="d-grid gap-2 mt-4">
                                         <Button variant="danger" type="submit">
-                                             <b>Sign Up</b>
+                                             <b>Register</b>
                                         </Button>
                                         <div className=' my-3 text-center'>
-                                             <small className='me-1 fs-6'>Have an account? </small>
+                                             <small className='me-1 fs-6'>Already have an account? </small>
                                              <Link to='/login' className=' text-decoration-none text-danger fw-semibold'>Login</Link>
                                         </div>
                                    </div>

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 const useTitle = title =>{
      useEffect(() =>{
-          document.title = `${title} - Arts&Crafts Toys`;
+          document.title = `${title} - PH Toys Store`;
      }, [title])
 };
 

@@ -7,15 +7,15 @@ const SubMyToys = ({ data, handelDelete }) => {
      const { photoURL, name, displayName, email, category, description, price, quantity, rating, _id } = data;
      return (
           <tr>
-               <td scope="row"><span>{displayName}</span></td>
+               <td><img className='myImg' src={photoURL} alt={name} /></td>
                <td><span>{name}</span></td>
-               <td><img className='myImg' src={photoURL} alt="" /></td>
+               <td scope="row"><span>{displayName}</span></td>
                <td><span>{category}</span></td>
                <td><span>{price} Tk</span></td>
                <td><span>{rating}</span></td>
                <td className='ms-5'><span>{quantity}</span></td>
                <td>
-                    <Link to={`updateToy/${_id}`}>
+                    <Link to={`update/${_id}`}>
                          <button type="button" className="btn btn-success me-3">Update</button>
                     </Link>
                </td>

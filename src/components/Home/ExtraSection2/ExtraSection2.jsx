@@ -4,16 +4,16 @@ import './ExtraSection2.css'
 const ExtraSection2 = () => {
      return (
           <div className=' container'>
-               <h1 className='my-5 text-center pt-lg-3'>Review Arts Crafts</h1>
+               <h1 className='my-5 text-center pt-lg-3'>Read more about our toys</h1>
                <div className="row">
                     <div className=" col-lg-6 mb-5">
                          <div className="row pe-lg-5">
                               <div className="shadow p-3 mb-lg-5 bg-white rounded col-lg-7">
                                    <p><b className="text-primary">World</b></p>
-                                   <h2>Featured post</h2>
+                                   <h2>Featured Post</h2>
                                    <p className="text-secondary">Nov 12</p>
-                                   <p>Moreover, textiles can be enhanced with various techniques and embellishments, printing and embroidery to different textile traditions around the world.</p>
-                                   <p className="text-primary">Contirune reading</p>
+                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est soluta velit impedit, sequi officia eius incidunt aliquam. Necessitatibus, veniam in.</p>
+                                   <p className="text-primary">Continue Reading......</p>
 
                               </div>
                               <div className="col-lg-5">
@@ -24,11 +24,11 @@ const ExtraSection2 = () => {
                     <div className="col-lg-6">
                          <div className="row">
                               <div className="shadow p-3 mb-3 bg-white rounded col-lg-7 ">
-                                   <p><b className="text-success">Desing</b></p>
-                                   <h2>Post title</h2>
+                                   <p><b className="text-success">Design</b></p>
+                                   <h2>More about Design</h2>
                                    <p className="text-secondary">Nov 11</p>
-                                   <p>The choice of materials in textile arts and crafts greatly influences the final outcome of a piece. including cotton, silk, linen, wool, and synthetic materials like polyester and nylon.</p>
-                                   <p className="text-primary">Contirune reading</p>
+                                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est iusto voluptates iure quia eaque, sint rerum. Libero minus aspernatur ab rerum obcaecati molestias nulla consequatur.</p>
+                                   <p className="text-primary">Continue Reading...</p>
 
                               </div>
                               <div className="col-lg-5">

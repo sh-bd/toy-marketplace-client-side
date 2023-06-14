@@ -6,7 +6,7 @@ const Blog = () => {
 
      return (
           <div className='mt-5 pt-5'>
-               <h1 className='py-lg-5 text-center'>Question Answer</h1>
+               <h1 className='py-lg-5 text-center'>Blog</h1>
                <div className='my-5 container'>
                     <div className="accordion" id="accordionExample">
                          <div className="accordion-item">

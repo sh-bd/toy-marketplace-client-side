@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 const Gallery = () => {
      return (
           <div className=' container'>
-               <h1 className='my-5 pt-lg-4 text-center'>Gallery Section</h1>
+               <h1 className='my-5 pt-lg-4 text-center'>Our Collection</h1>
                <div className="row my-4  no-gutter">
                     <div className="col-lg-4 mb-3 aos-init aos-animate" data-aos="fade-right"
                          data-aos-offset="300" data-aos-easing="ease-in-sine">

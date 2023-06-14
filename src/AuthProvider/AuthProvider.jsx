@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useState } from 'react';
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import React, { createContext, useEffect, useState } from 'react';
 import app from '../firebaseConfig/firebase.config';
 
 const auth = getAuth(app);
@@ -22,12 +22,12 @@ const AuthProvider = ({ children }) => {
           return signInWithEmailAndPassword(auth, email, password)
      }
 
-     const googlSignIn = () => {
+     const googleSignIn = () => {
           setLoading(true)
           return signInWithPopup(auth, googleProvider)
      }
 
-     const githubSingIn = () => {
+     const githubSignIn = () => {
           setLoading(true)
           return signInWithPopup(auth, githubProvider)
      }
@@ -43,7 +43,7 @@ const AuthProvider = ({ children }) => {
                          email: currentUser.email
                     }
 
-                    fetch('https://assignment11-server-site-delta.vercel.app/jwt', {
+                    fetch('http://localhost:5000/jwt', {
                          method: 'POST',
                          headers: {
                               'content-type': 'application/json'
@@ -52,11 +52,11 @@ const AuthProvider = ({ children }) => {
                     })
                          .then(res => res.json())
                          .then(data => {
-                              localStorage.setItem('arts-access-token', data.token);
+                              localStorage.setItem('toys-access-token', data.token);
                          })
                }
                else {
-                    localStorage.removeItem('arts-access-token');
+                    localStorage.removeItem('toys-access-token');
                }
                // jwt part end
           })
@@ -81,8 +81,8 @@ const AuthProvider = ({ children }) => {
           createUser,
           signIn,
           resetPassword,
-          googlSignIn,
-          githubSingIn,
+          googleSignIn,
+          githubSignIn,
      }
      return (
           <div>

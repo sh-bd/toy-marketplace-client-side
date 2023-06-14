@@ -1,5 +1,5 @@
 {
-  "name": "assignment11-client-site",
+  "name": "toy-marketplace-client",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -19,10 +19,11 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0",
+    "react-icons": "^4.9.0",
     "react-router-dom": "^6.11.1",
-    "sort-by": "^1.2.0",
-    "sweetalert2": "^11.7.5"
+    "sort-by": "^0.0.2",
+    "sweetalert2": "^11.4.8",
+    "sweetalert2-react-content": "^5.0.7"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

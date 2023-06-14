@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import './UpdateToy.css'
 import { useLoaderData, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+import './UpdateToy.css';
 
 const UpdateToy = () => {
-     useTitle('UpdateToy')
+     useTitle('Update Your Toy')
      const navigate = useNavigate();
      const { user } = useContext(AuthContext)
      const toyData = useLoaderData();
@@ -33,7 +33,7 @@ const UpdateToy = () => {
           }
 
           // server data post start 
-          fetch(`https://assignment11-server-site-delta.vercel.app/Toy/${_id}`, {
+          fetch(`http://localhost:5000/toy/${_id}`, {
                method: 'PUT',
                headers: {
                     'content-type': 'application/json'
@@ -52,7 +52,7 @@ const UpdateToy = () => {
                     }
 
                     // server data post exit 
-                    navigate('/myToys')
+                    navigate('/my-toys')
 
                })
 
@@ -63,7 +63,7 @@ const UpdateToy = () => {
      return (
           <div className='mt-5 pt-5 container '>
                <div className=' my-4 text-center'>
-                    <h1>UpData Toy</h1>
+                    <h1>Update Your Toy</h1>
                </div>
                <div className='checkoutForm rounded'>
                     <form className='p-lg-5 mx-lg-5' onSubmit={formHandel}>
@@ -78,9 +78,9 @@ const UpdateToy = () => {
                          <div className=' row px-4 pt-4'>
                               <div className="mb-2">
                                    <select className="form-select py-2" name='category' aria-label="Default select example" defaultValue={category} required>
-                                        <option>Sculpting and Modeling</option>
-                                        <option value="Jewelry Making">Jewelry Making</option>
-                                        <option value="Drawing and Coloring">Drawing and Coloring</option>
+                                        <option>Water Toys</option>
+                                        <option value="Scientific Toys">Scientific Toys</option>
+                                        <option value="Entertaining Toys">Entertaining Toys</option>
                                    </select>
                               </div>
                          </div>
@@ -99,7 +99,7 @@ const UpdateToy = () => {
                               <textarea name='description' defaultValue={description} className="form-control py-2" id="validationTextarea" placeholder="Detail description" required rows="5"></textarea>
                          </div>
                          <div className='px-4'>
-                              <button type="submit" className="btn btn-danger w-100 py-2 fw-semibold">UpData Toy</button>
+                              <button type="submit" className="btn btn-danger w-100 py-2 fw-semibold">Update</button>
                          </div>
                     </form>
                </div>

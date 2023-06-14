@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import SubAllToys from './SubAllToys/SubAllToys';
-import "./ALLToys.css"
 import useTitle from '../../hooks/useTitle';
+import "./ALLToys.css";
+import SubAllToys from './SubAllToys/SubAllToys';
 
 const AllToys = () => {
-     useTitle('AllToys')
+     useTitle('All Toys')
      const [jsonData, setJsonData] = useState([]);
      const [isLoading, setIsLoading] = useState(true);
      const [searchText, setSearchText] = useState('')
 
      useEffect(() => {
-          fetch('https://assignment11-server-site-delta.vercel.app/Toy')
+          fetch('http://localhost:5000/toy')
                .then(res => res.json())
                .then(data => {
                     setJsonData(data);
@@ -21,7 +21,7 @@ const AllToys = () => {
 
      // search server json start 
      const handleSearch = () => {
-          fetch(`https://assignment11-server-site-delta.vercel.app/ToySearchText/${searchText}`)
+          fetch(`http://localhost:5000/toySearchText/${searchText}`)
                .then((res) => res.json())
                .then((data) => {
                     setJsonData(data);
@@ -44,10 +44,11 @@ const AllToys = () => {
                     <table className="table text-center table-striped">
                          <thead className='table-light'>
                               <tr>
-                                   <th scope="col">Seller Name</th>
+                                   <th scope="col">Photo</th>
                                    <th scope="col">Toy Name</th>
-                                   <th scope="col">Sub-category</th>
-                                   <th scope="col">Toy Price</th>
+                                   <th scope="col">Seller</th>
+                                   <th scope="col">Category</th>
+                                   <th scope="col">Price</th>
                                    <th scope="col">Available Quantity</th>
                                    <th scope="col">View</th>
                               </tr>

@@ -1,25 +1,22 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import Main from './components/Main/Main';
-import Home from './components/Home/Home';
-import ErrorPage from './components/ErrorPage';
-import Register from './components/Register/Register';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AuthProvider from './AuthProvider/AuthProvider';
-import Login from './components/Login/Login';
-import Blog from './components/Blog/Blog';
 import AddToy from './components/AddToy/AddToy';
-import MyToys from './components/MyToys/MyToys';
-import UpdateToy from './components/UpDateToy/UpDateToy';
 import AllToys from './components/AllToys/AllToys';
+import Blog from './components/Blog/Blog';
+import ErrorPage from './components/ErrorPage';
+import Home from './components/Home/Home';
+import Login from './components/Login/Login';
+import Main from './components/Main/Main';
+import MyToys from './components/MyToys/MyToys';
+import Register from './components/Register/Register';
+import UpdateToy from './components/UpDateToy/UpDateToy';
 import ViewDetails from './components/ViewDetails/ViewDetails';
+import './index.css';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
-import TabDetails from './components/Home/ReactTab/TabDetails/TabDetails';
+// import TabDetails from './components/Home/ReactTab/TabDetails/TabDetails';
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
 
 const router = createBrowserRouter([
@@ -45,31 +42,31 @@ const router = createBrowserRouter([
         element: <Login></Login>
       },
       {
-        path: "/addToy",
+        path: "/add-toy",
         element: <AddToy></AddToy>
       },
       {
-        path: "/myToys",
+        path: "/my-toys",
         element: <MyToys></MyToys>
       },
       {
-        path: "/allToys",
+        path: "/all-toys",
         element: <AllToys></AllToys>
       },
+      // {
+      //   path: '/toy/:id',
+      //   element: <PrivateRoute><TabDetails></TabDetails></PrivateRoute>,
+      //   loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
+      // },
       {
-        path: '/tab1Details/:id',
-        element: <PrivateRoute><TabDetails></TabDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://assignment11-server-site-delta.vercel.app/Toy/${params.id}`)
-      },
-      {
-        path: '/details/:id',
+        path: '/toy/:id',
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://assignment11-server-site-delta.vercel.app/Toy/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
       },
       {
-        path: "myToys/updateToy/:id",
+        path: "my-toys/update/:id",
         element: <UpdateToy></UpdateToy>,
-        loader: ({ params }) => fetch(`https://assignment11-server-site-delta.vercel.app/Toy/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
       }
     ]
   },

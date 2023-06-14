@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import SubMyToys from './SubMyToys/SubMyToys';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+import SubMyToys from './SubMyToys/SubMyToys';
 
 const MyToys = () => {
-     useTitle('MyToys')
+     useTitle('My Toys')
 
      const { user } = useContext(AuthContext);
      const [isLoading, setIsLoading] = useState(true);
@@ -15,7 +15,7 @@ const MyToys = () => {
      const navigate = useNavigate()
 
      // // server data get start 
-     // const url = `https://assignment11-server-site-delta.vercel.app/Toy?email=${user?.email}&sort=${priceSort}`;
+     // const url = `http://localhost:5000/toy?email=${user?.email}&sort=${priceSort}`;
      // useEffect(() => {
      //      fetch(url)
      //           .then(res => res.json())
@@ -27,18 +27,21 @@ const MyToys = () => {
      // // server data get exit 
 
      // jwt added server data get start
-     const url = `https://assignment11-server-site-delta.vercel.app/Toy?email=${user?.email}&sort=${priceSort}`;
+     // const url = `http://localhost:5000/toy?email=${user?.email}&sort=${priceSort}`;
+     const url = `http://localhost:5000/toy?email=${user?.email}`;
      useEffect(() => {
           fetch(url, {
                method: 'GET',
                headers: {
-                    authorization: `Bearer ${localStorage.getItem('arts-access-token')}`
+                    authorization: `Bearer ${localStorage.getItem('toys-access-token')}`
                }
           })
                .then(res => res.json())
                .then(data => {
-                    setToysData(data);
-                    setIsLoading(false);
+                    if (!data.error) {
+                         setToysData(data);
+                         setIsLoading(false);
+                    }
                })
      }, [priceSort, url]);
      // jwt added server data get exit
@@ -56,7 +59,7 @@ const MyToys = () => {
           }).then((result) => {
                if (result.isConfirmed) {
 
-                    fetch(`https://assignment11-server-site-delta.vercel.app/Toy/${id}`, {
+                    fetch(`http://localhost:5000/toy/${id}`, {
                          method: 'DELETE'
                     })
                          .then(res => res.json())
@@ -81,51 +84,53 @@ const MyToys = () => {
 
 
      return (
-          <div className='mt-5 pt-5 container'>
-               <h1 className='my-4 text-center'>My Toys</h1>
-               <div className=" my-3 pb-3">
-                    <button onClick={() => setPriceSort(1)} type="button" className="btn btn-success me-2">Ascending Sort</button>
-                    <button onClick={() => setPriceSort(-1)} type="button" className="btn btn-danger">Descending Sort</button>
-               </div>
-
-               <section>
-                    <div className='table-responsive'>
-                         <table className="table text-center table-striped">
-                              <thead className='table-light'>
-                                   <tr>
-                                        <th scope="col">SELLER NAME</th>
-                                        <th scope="col">TOY NAME</th>
-                                        <th scope="col">PICTURE</th>
-                                        <th scope="col">CATEGORY</th>
-                                        <th scope="col">PRICE</th>
-                                        <th scope="col">RATING</th>
-                                        <th scope="col">QUANTITY</th>
-                                        <th scope="col">UPDATE</th>
-                                        <th scope="col">DELETE</th>
-                                   </tr>
-                              </thead>
-
-                              <tbody>
-                                   {
-                                        toysData.map(data => <SubMyToys
-                                             key={data._id}
-                                             data={data}
-                                             handelDelete={handelDelete}
-                                        ></SubMyToys>)
-                                   }
-                              </tbody>
-                         </table>
+          <>
+               <div className='mt-5 pt-5 container'>
+                    <h1 className='my-4 text-center'>My Toys</h1>
+                    <div className=" my-3 pb-3">
+                         <button onClick={() => setPriceSort(1)} type="button" className="btn btn-success me-2">Ascending Sort</button>
+                         <button onClick={() => setPriceSort(-1)} type="button" className="btn btn-danger">Descending Sort</button>
                     </div>
-                    {
-                         isLoading && <div className="text-center my-5">
-                              <div className="spinner-border" role="status">
-                                   <span className="visually-hidden">Loading...</span>
-                              </div>
-                         </div>
-                    }
 
-               </section>
-          </div>
+                    <section>
+                         <div className='table-responsive'>
+                              <table className="table text-center table-striped">
+                                   <thead className='table-light'>
+                                        <tr>
+                                             <th scope="col">PHOTO</th>
+                                             <th scope="col">TOY NAME</th>
+                                             <th scope="col">SELLER</th>
+                                             <th scope="col">CATEGORY</th>
+                                             <th scope="col">PRICE</th>
+                                             <th scope="col">RATING</th>
+                                             <th scope="col">QUANTITY</th>
+                                             <th scope="col">UPDATE</th>
+                                             <th scope="col">DELETE</th>
+                                        </tr>
+                                   </thead>
+
+                                   <tbody>
+                                        {
+                                             toysData.map(data => <SubMyToys
+                                                  key={data._id}
+                                                  data={data}
+                                                  handelDelete={handelDelete}
+                                             ></SubMyToys>)
+                                        }
+                                   </tbody>
+                              </table>
+                         </div>
+                         {
+                              isLoading && <div className="text-center my-5">
+                                   <div className="spinner-border" role="status">
+                                        <span className="visually-hidden">Loading...</span>
+                                   </div>
+                              </div>
+                         }
+
+                    </section>
+               </div>
+          </>
      );
 };
 

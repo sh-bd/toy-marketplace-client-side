@@ -73,7 +73,7 @@ const Register = () => {
 
                     // user information post data page start 
                     const saveUser = { name: name, email: email, password: password }
-                    fetch('http://localhost:5000/users', {
+                    fetch('https://toy-marketplace-server-side-sh4mim.vercel.app/users', {
                          method: 'POST',
                          headers: {
                               'content-type': 'application/json'

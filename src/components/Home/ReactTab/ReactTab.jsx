@@ -10,7 +10,7 @@ const ReactTab = () => {
      const [tab3Data, setTab3Data] = useState([])
 
      useEffect(() => {
-          fetch('http://localhost:5000/toy')
+          fetch('https://toy-marketplace-server-side-sh4mim.vercel.app/toy')
                .then(res => res.json())
                .then(data => {
                     const Tab1Data = data.filter(data => data.category === "Water Toys")

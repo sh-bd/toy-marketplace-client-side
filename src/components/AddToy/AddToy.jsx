@@ -26,7 +26,7 @@ const AddToy = () => {
           const add = { name, photoURL, displayName, email, category, price, rating, quantity, description }
 
           // server data post start 
-          fetch('http://localhost:5000/toy', {
+          fetch('https://toy-marketplace-server-side-sh4mim.vercel.app/toy', {
                method: 'POST',
                headers: {
                     'content-type': 'application/json'

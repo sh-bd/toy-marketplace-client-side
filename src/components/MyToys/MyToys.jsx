@@ -15,7 +15,7 @@ const MyToys = () => {
      const navigate = useNavigate()
 
      // // server data get start 
-     // const url = `http://localhost:5000/toy?email=${user?.email}&sort=${priceSort}`;
+     // const url = `https://toy-marketplace-server-side-sh4mim.vercel.app/toy?email=${user?.email}&sort=${priceSort}`;
      // useEffect(() => {
      //      fetch(url)
      //           .then(res => res.json())
@@ -27,8 +27,8 @@ const MyToys = () => {
      // // server data get exit 
 
      // jwt added server data get start
-     // const url = `http://localhost:5000/toy?email=${user?.email}&sort=${priceSort}`;
-     const url = `http://localhost:5000/toy?email=${user?.email}`;
+     // const url = `https://toy-marketplace-server-side-sh4mim.vercel.app/toy?email=${user?.email}&sort=${priceSort}`;
+     const url = `https://toy-marketplace-server-side-sh4mim.vercel.app/toy?email=${user?.email}`;
      useEffect(() => {
           fetch(url, {
                method: 'GET',
@@ -59,7 +59,7 @@ const MyToys = () => {
           }).then((result) => {
                if (result.isConfirmed) {
 
-                    fetch(`http://localhost:5000/toy/${id}`, {
+                    fetch(`https://toy-marketplace-server-side-sh4mim.vercel.app/toy/${id}`, {
                          method: 'DELETE'
                     })
                          .then(res => res.json())

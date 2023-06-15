@@ -33,7 +33,7 @@ const UpdateToy = () => {
           }
 
           // server data post start 
-          fetch(`http://localhost:5000/toy/${_id}`, {
+          fetch(`https://toy-marketplace-server-side-sh4mim.vercel.app/toy/${_id}`, {
                method: 'PUT',
                headers: {
                     'content-type': 'application/json'

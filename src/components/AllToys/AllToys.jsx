@@ -10,7 +10,7 @@ const AllToys = () => {
      const [searchText, setSearchText] = useState('')
 
      useEffect(() => {
-          fetch('http://localhost:5000/toy')
+          fetch('https://toy-marketplace-server-side-sh4mim.vercel.app/toy')
                .then(res => res.json())
                .then(data => {
                     setJsonData(data);
@@ -21,7 +21,7 @@ const AllToys = () => {
 
      // search server json start 
      const handleSearch = () => {
-          fetch(`http://localhost:5000/toySearchText/${searchText}`)
+          fetch(`https://toy-marketplace-server-side-sh4mim.vercel.app/toySearchText/${searchText}`)
                .then((res) => res.json())
                .then((data) => {
                     setJsonData(data);

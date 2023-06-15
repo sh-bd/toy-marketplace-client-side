@@ -56,17 +56,17 @@ const router = createBrowserRouter([
       // {
       //   path: '/toy/:id',
       //   element: <PrivateRoute><TabDetails></TabDetails></PrivateRoute>,
-      //   loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
+      //   loader: ({ params }) => fetch(`https://toy-marketplace-server-side-sh4mim.vercel.app/toy/${params.id}`)
       // },
       {
         path: '/toy/:id',
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
+        loader: ({ params }) => fetch(`https://toy-marketplace-server-side-sh4mim.vercel.app/toy/${params.id}`)
       },
       {
         path: "my-toys/update/:id",
         element: <UpdateToy></UpdateToy>,
-        loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
+        loader: ({ params }) => fetch(`https://toy-marketplace-server-side-sh4mim.vercel.app/toy/${params.id}`)
       }
     ]
   },

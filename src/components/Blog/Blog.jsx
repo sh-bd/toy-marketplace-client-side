@@ -37,12 +37,9 @@ const Blog = () => {
                               </h2>
                               <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                    <div className="accordion-body">
-                                        <b>SQL: </b> databases are based on the relational data model. They organize data into structured tables with predefined schemas, where relationships between tables are established through primary and foreign keys.
-                                        SQL databases typically scale vertically by adding more resources to a single server. While they can handle a significant amount of data, their scalability is limited by the capacity of a single machine.
-                                        SQL databases have a rigid schema, meaning that the structure of the data is defined in advance. Any changes to the schema require altering the tables, which can be complex and time-consuming.
-                                        SQL databases use the SQL language, a standardized language for querying and manipulating structured data. SQL provides powerful querying capabilities with a rich set of operators, functions, and joins. <br />
+                                        <b>SQL: </b> SQL databases are based on the relational model, organizing data into structured tables with predefined schemas. They use SQL for querying and manipulation, offering powerful capabilities with operators, functions, and joins. SQL databases scale vertically by adding resources to a single server and are suitable for multi-row transactions, making them ideal for structured data and complex querying scenarios. <br />
 
-                                        <b>NoSQL: </b>NoSQL databases use various data models, such as key-value, document, columnar, and graph. They provide more flexibility in data representation and do not enforce rigid schemas. NoSQL databases can handle unstructured or semi-structured data more efficiently.NoSQL databases are designed for horizontal scalability. They distribute data across multiple servers, allowing for seamless scalability by adding more servers to the database cluster. This makes them more suitable for handling large-scale, high-volume applications.NoSQL databases offer schema flexibility, allowing developers to store data without predefined structures. This makes them suitable for scenarios where the data schema is dynamic or evolves over time.NoSQL databases often have their own query languages or APIs specific to the data model they support. Some NoSQL databases provide query languages similar to SQL, while others offer simpler key-value or document-based retrieval mechanisms.
+                                        <b>NoSQL: </b>NoSQL databases use various data models (key-value, document, columnar, graph) and provide flexibility in data representation without rigid schemas. They scale horizontally by distributing data across multiple servers, enabling seamless scalability for large-scale applications. NoSQL databases offer schema flexibility, making them suitable for unstructured or dynamic data. They often have their own query languages or APIs specific to the data model, catering to efficient retrieval mechanisms. NoSQL excels in handling unstructured data and providing scalable solutions.
 
 
                                    </div>
@@ -56,9 +53,6 @@ const Blog = () => {
                               <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                    <div className="accordion-body">
                                         <b>Express.js: </b> Express.js is a minimal and flexible web application framework for Node.js, providing a simple and unopinionated approach to building web applications and APIs. It simplifies handling HTTP requests, routing, middleware management, and template rendering.  <br />
-
-
-
                                         <b>Nest.js: </b> Express.js is known for its simplicity, extensibility, and wide usage in the Node.js ecosystem. Additionally, Nest.js is a progressive framework built with TypeScript, inspired by Angular's concepts. It combines object-oriented, functional, and reactive programming to offer a structured and scalable development experience, particularly suited for enterprise-level applications and APIs.
                                    </div>
                               </div>

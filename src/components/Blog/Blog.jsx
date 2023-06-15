@@ -17,16 +17,12 @@ const Blog = () => {
                               </h2>
                               <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                    <div className="accordion-body">
-                                        <b>Access Token:</b> An access token is a credential that is issued by an authentication server after a user successfully authenticates and grants permission to an application. It represents the user's authorization to access specific resources or perform certain actions on behalf of the user. Access tokens are typically short-lived and have an expiration time, after which they become invalid. They are used to authenticate API requests to protected resources by including them in the request headers. <br />
+                                        <b>Access Token:</b> A refresh token simply allows you to revalidate a user without forcing them to submit their login credentials several times. If the refresh token is legitimate and requests access to confidential resources, the access token is re-issued. <br />
 
-                                        <b>Refresh Token:</b> A refresh token is also issued by the authentication server but has a longer lifetime compared to the access token. It is used to obtain a new access token once the previous one expires. When an access token expires, instead of requiring the user to re-authenticate, the application can use the refresh token to request a new access token from the server without involving the user. This helps to improve the user experience by avoiding frequent re-authentication. <br />
-
-                                        <b>In-memory storage:</b> For web applications, you can store the tokens in memory variables, which are cleared when the user closes the browser. This approach is suitable if you don't need to persist the tokens across sessions or page refreshes, and you obtain new tokens each time the user logs in. <br />
-
-                                        <b>Cookies:</b> You can store the tokens in HTTP-only secure cookies, which are accessible by the server but not by JavaScript code running in the browser. This approach provides some level of protection against cross-site scripting (XSS) attacks. However, be cautious about the security implications and make sure to set the appropriate expiration times for the cookies.
+                                        <b>How it works:</b> Access tokens and refresh tokens are components of authentication. Access tokens authorize resource access and have a limited lifespan. Refresh tokens obtain new access tokens when they expire. Store them on the client-side in secure cookies or browser storage, considering security and protection against XSS (cross site scripting) attacks.
                                         <br />
 
-                                        <b>Local storage or session storage:</b> These are browser-based storage mechanisms that allow storing data on the client-side. While convenient, these storage options are more vulnerable to cross-site scripting (XSS) attacks. If you choose this approach, make sure to take appropriate security measures and avoid storing sensitive information in these storage mechanisms. <br />
+                                        <b>Where should we store it:</b>  It can be stored to your browser's local storage, or can be stored as a HTTP secure only cookie on the client side, which is more secure than local storage or iInstead of storing the token, save the username and password in the browser or client-side cookie, and then get a fresh token by quietly submitting credentials. <br />
                                    </div>
                               </div>
                          </div>

@@ -9,6 +9,13 @@ import ActiveLink from '../ActiveLink/ActiveLink';
 import './Footer.css';
 
 const Footer = () => {
+     const scrollToTop = () => {
+          window.scrollTo({
+               top: 0,
+               behavior: 'smooth'
+          });
+     };
+
      return (
           <div className='mt-5'>
                <footer className="footer container-fluid sticky-lg-top">
@@ -116,8 +123,8 @@ const Footer = () => {
                <div className="container mt-3">
                     <p className="text-left font-bold ">
                          <Link className='xyz text-danger fw-semibold' to='/'>&copy; PH Toys Store</Link>
-                         <span className="text-danger fw-semibold float-end">
-                              Back to top
+                         <span className="float-end">
+                              <Link className='xyz text-danger fw-semibold ' onClick={scrollToTop}>Scroll to top</Link>
                          </span>
                     </p>
                </div>

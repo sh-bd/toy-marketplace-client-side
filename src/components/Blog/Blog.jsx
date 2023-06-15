@@ -55,16 +55,11 @@ const Blog = () => {
                               </h2>
                               <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                    <div className="accordion-body">
-                                        <b>Express.js :</b> is a minimalist web framework for Node.js. It provides a simple and unopinionated approach to building web applications and APIs. Express.js offers a lightweight set of features and middleware that allow developers to handle HTTP requests, define routes, manage sessions, and interact with databases.
-                                        Key features of Express.js include:
-                                        Routing: Express.js provides an intuitive routing system for defining endpoints and handling HTTP methods (GET, POST, PUT, DELETE, etc.).
-                                        Middleware: Express.js offers a middleware architecture that allows developers to plug in functionality at various stages of the request-response cycle, such as authentication, logging, parsing request bodies, error handling, and more.
-                                        Template engines: Express.js supports various template engines like EJS, Handlebars, and Pug, enabling server-side rendering of dynamic web pages.
-                                        Extensibility: Express.js is highly extensible, allowing developers to incorporate additional modules and libraries to enhance the functionality of their applications. <br />
+                                        <b>Express.js: </b> Express.js is a minimal and flexible web application framework for Node.js, providing a simple and unopinionated approach to building web applications and APIs. It simplifies handling HTTP requests, routing, middleware management, and template rendering.  <br />
 
 
 
-                                        <b>Nest.js: </b> is a progressive and opinionated web application framework built with TypeScript and heavily inspired by Angular's architectural concepts. It combines elements of object-oriented programming, functional programming, and reactive programming to provide a robust and structured development experience.Nest.js aims to provide a structured and scalable development experience while leveraging the power of TypeScript and the familiarity of Angular's concepts. It is well-suited for building enterprise-level applications and APIs.
+                                        <b>Nest.js: </b> Express.js is known for its simplicity, extensibility, and wide usage in the Node.js ecosystem. Additionally, Nest.js is a progressive framework built with TypeScript, inspired by Angular's concepts. It combines object-oriented, functional, and reactive programming to offer a structured and scalable development experience, particularly suited for enterprise-level applications and APIs.
                                    </div>
                               </div>
                          </div>

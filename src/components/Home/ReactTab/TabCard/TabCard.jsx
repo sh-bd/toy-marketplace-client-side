@@ -20,7 +20,7 @@ const TabCard = ({ data }) => {
                          </div>
 
 
-                         <Link to={`/details/${_id}`}>
+                         <Link to={`/toy/${_id}`}>
                               <button href="#"
                                    className="btn btn-primary">
                                    View Details

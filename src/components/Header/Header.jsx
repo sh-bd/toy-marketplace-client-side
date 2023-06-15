@@ -59,7 +59,7 @@ const Header = () => {
                                    {
                                         user ? <div>
                                              <img title={user.displayName} className='imgStyle me-3' src={user.photoURL} alt="" />
-                                             <Button onClick={handelLogOut} variant="info" className='py-2'>Log Out</Button>
+                                             <Button onClick={handelLogOut} variant="warning" className='py-2'>Log Out</Button>
                                         </div> : <ActiveLink to="/login">Login</ActiveLink>
                                    }
                               </Form>

@@ -21,7 +21,7 @@ const SubAllToys = ({ data }) => {
                <td><span>{price} Tk</span></td>
                <td className='ms-5'><span>{quantity}</span></td>
                <td>
-                    <Link onClick={handelToast} to={`/toy/${_id}`} className='text-decoration-none fs-2 text-danger'>
+                    <Link onClick={handelToast} to={`/toy/${_id}`} className='text-decoration-none fs-2 text-warning'>
                          <BsFillArrowRightCircleFill />
                     </Link>
                </td>

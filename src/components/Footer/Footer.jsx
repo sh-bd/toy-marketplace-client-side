@@ -4,6 +4,7 @@ import { BiPhoneCall } from 'react-icons/bi';
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { SiGmail } from 'react-icons/si';
+import { Link } from 'react-router-dom';
 import ActiveLink from '../ActiveLink/ActiveLink';
 import './Footer.css';
 
@@ -16,7 +17,7 @@ const Footer = () => {
                               <div className="col-lg-4">
                                    <div className="skk mx-lg-3">
                                         <div className="sm">
-                                             <h2 className="text-info mt-4 text-center">Contact Us</h2>
+                                             <h2 className="text-warning mt-4 text-center">Contact Us</h2>
                                         </div>
                                         <p className="text-justify mt-4 text-light ms-2">Thanks for visiting the best toy store in the country!</p>
                                         <ul className="list-unstyled ms-2">
@@ -36,7 +37,8 @@ const Footer = () => {
                                                   <p className='d-flex align-content-center'>
                                                        <BiPhoneCall className='icon text-light fs-4' />
                                                        <span className="text-light ms-2">
-                                                            8801753492305</span></p>
+                                                            8801753492305</span>
+                                                  </p>
                                              </li>
                                         </ul>
                                    </div>
@@ -44,7 +46,7 @@ const Footer = () => {
                               <div className="col-lg-4">
                                    <div className="mx-lg-3 ps-lg-5">
                                         <div className="sm">
-                                             <h2 className="text-info mt-4 text-center">Useful Links</h2>
+                                             <h2 className="text-warning mt-4 text-center">Useful Links</h2>
                                         </div>
                                         <ul className="list-unstyled mt-4 linkStyle">
                                              <li>
@@ -66,17 +68,17 @@ const Footer = () => {
                               <div className="col-lg-4">
                                    <div className="ps-lg-3">
                                         <div className="sm">
-                                             <h2 className="text-info mt-4 text-center">Social Links</h2>
+                                             <h2 className="text-warning mt-4 text-center">Social Links</h2>
                                         </div>
                                         <div className=" btn-group mt-4">
                                              <input type="text" className='rounded ps-3 ' placeholder=" Enter your email" />
-                                             <input type="submit" value="Subscribe" className="btn btn-info btn-lg" />
+                                             <input type="submit" value="Subscribe" className="btn btn-warning btn-lg" />
                                         </div>
-                                        <h4 className=" text-info mt-4">Follow us</h4>
+                                        <h4 className=" text-warning mt-4">Follow us on</h4>
                                         <div className=" d-flex mt-4">
                                              <div className="sa">
                                                   <div className="followUs">
-                                                       <a href="https://www.facebook.com/smsarzil.muntaha" target='_blank'>
+                                                       <a href="#" target='_blank'>
                                                             <FaFacebook />
 
                                                        </a>
@@ -91,14 +93,14 @@ const Footer = () => {
                                              </div>
                                              <div className="sa">
                                                   <div className="followUs">
-                                                       <a href="https://www.youtube.com/channel/UCJOmN86g6tWuxer1_J5wuaQ" target='_blank'>
+                                                       <a href="#" target='_blank'>
                                                             <FaYoutube />
                                                        </a>
                                                   </div>
                                              </div>
                                              <div className="sa ">
                                                   <div className="followUs">
-                                                       <a href="https://mail.google.com/mail/u/0/#inbox">
+                                                       <a href="#">
                                                             <SiGmail />
                                                        </a>
                                                   </div>
@@ -112,9 +114,9 @@ const Footer = () => {
 
 
                <div className="container mt-3">
-                    <p className="text-left font-bold text-info">
-                         &copy; PH Toys Store
-                         <span className="text-info float-end">
+                    <p className="text-left font-bold ">
+                         <Link className='xyz text-danger fw-semibold' to='/'>&copy; PH Toys Store</Link>
+                         <span className="text-danger fw-semibold float-end">
                               Back to top
                          </span>
                     </p>

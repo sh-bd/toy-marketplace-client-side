@@ -35,7 +35,7 @@ const AllToys = () => {
                {/* search part start  */}
                <div className="container my-4 pb-3 d-flex justify-content-center">
                     <input onChange={(e) => setSearchText(e.target.value)} id="input-field" type="text" className=" w-50 py-2 px-2 form-control mx-3" placeholder="Search.." />{" "}
-                    <button onClick={handleSearch} id="btn-search" type="submit" className="btn btn-info">Search</button>
+                    <button onClick={handleSearch} id="btn-search" type="submit" className="btn btn-warning">Search</button>
                </div>
                {/* search part end  */}
 

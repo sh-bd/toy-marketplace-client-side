@@ -15,7 +15,7 @@ const ErrorPage = () => {
           <h3 className=' font-semibold mb-8'>
             {error?.message}
           </h3>
-          <Button className='bg-info mt-3'>
+          <Button className='bg-warning mt-3'>
             <Link to='/' className='text-decoration-none'>            Back to Home</Link>
           </Button>
         </div>

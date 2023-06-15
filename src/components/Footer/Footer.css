@@ -1,6 +1,9 @@
 .footer{
      background: #1B2B4D;
  }
+.xyz {
+    text-decoration: none;
+ }
 .sm h2{
  width: 220px;
  border-bottom: 4px solid white;

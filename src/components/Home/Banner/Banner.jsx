@@ -12,12 +12,12 @@ const Banner = () => {
                                    <div className='p-lg-3 text-position text-center'>
                                         <div className=' ps-lg-5 ms-lg-3'>
                                              <div className=' col-lg-6 px-4 mb-3 mx-auto'>
-                                                  <h2 className=' display-4 fw-semibold mb-3 pt-5'>The World of Arts Crafts Toys</h2>
+                                                  <h2 className=' display-4 fw-semibold mb-3 pt-5'>The best toys out there!</h2>
                                              </div>
-                                             <p className=' fs-6 col-lg-8 fw-semibold mx-auto px-5'>Arts and crafts toys are playthings designed to foster creativity, imagination, and hands-on artistic expression in children.</p>
+                                             <p className=' fs-6 col-lg-8 fw-semibold mx-auto px-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt facere officiis voluptatibus aut vel mollitia eum qui, sint nulla odit?</p>
                                              <div className='mt-3'>
                                                   <button type="button" className="btn btn-danger me-3 mb-2">Arts More</button>
-                                                  <button type="button" className="btn text-light btn-info mb-2">Crafts Project</button>
+                                                  <button type="button" className="btn text-light btn-warning mb-2">Toys for Kids</button>
                                              </div>
                                         </div>
                                    </div>
@@ -29,13 +29,13 @@ const Banner = () => {
                                    <div className='p-lg-3 text-position text-center'>
                                         <div className=' ps-lg-5 ms-lg-3'>
                                              <div className=' col-lg-6 px-4 mb-3 mx-auto'>
-                                                  <h2 className=' display-4 fw-semibold mb-3 pt-5'>The World of Arts Crafts Toys</h2>
+                                                  <h2 className=' display-4 fw-semibold mb-3 pt-5'>The best toys out there!</h2>
                                              </div>
-                                             <p className=' fs-6 col-lg-8 fw-semibold mx-auto px-5'>Arts and crafts toys are playthings designed to foster creativity, imagination, and hands-on artistic expression in children.</p>
+                                             <p className=' fs-6 col-lg-8 fw-semibold mx-auto px-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime architecto ullam, facere aut est aliquam eveniet repellat nesciunt porro facilis!</p>
 
                                              <div className='mt-3'>
                                                   <button type="button" className="btn btn-danger me-3 mb-2">Arts More</button>
-                                                  <button type="button" className="btn text-light btn-info  mb-2">Crafts Project</button>
+                                                  <button type="button" className="btn text-light btn-warning  mb-2">Toys for Kids</button>
                                              </div>
                                         </div>
                                    </div>
@@ -48,13 +48,13 @@ const Banner = () => {
                                    <div className='p-lg-3 text-position text-center'>
                                         <div className=' ps-lg-5 ms-lg-3'>
                                              <div className=' col-lg-6 px-4 mb-3 mx-auto'>
-                                                  <h2 className=' display-4 fw-semibold mb-3 pt-5'>The World of Arts Crafts Toys</h2>
+                                                  <h2 className=' display-4 fw-semibold mb-3 pt-5'>The best toys out there!</h2>
                                              </div>
-                                             <p className=' fs-6 col-lg-8 fw-semibold mx-auto px-5'>Arts and crafts toys are playthings designed to foster creativity, imagination, and hands-on artistic expression in children.</p>
+                                             <p className=' fs-6 col-lg-8 fw-semibold mx-auto px-5'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas dolorem neque necessitatibus maxime placeat blanditiis animi repudiandae facilis tempore magnam?</p>
 
                                              <div className='mt-3'>
                                                   <button type="button" className="btn btn-danger me-3 mb-2">Arts More</button>
-                                                  <button type="button" className="btn text-light btn-info  mb-2">Crafts Project</button>
+                                                  <button type="button" className="btn text-light btn-warning  mb-2">Toys for Kids</button>
                                              </div>
                                         </div>
                                    </div>
@@ -66,13 +66,13 @@ const Banner = () => {
                                    <div className='p-lg-3 text-position text-center'>
                                         <div className=' ps-lg-5 ms-lg-3'>
                                              <div className=' col-lg-6 px-4 mb-3 mx-auto'>
-                                                  <h2 className=' display-4 fw-semibold mb-3 pt-5'>The World of Arts Crafts Toys</h2>
+                                                  <h2 className=' display-4 fw-semibold mb-3 pt-5'>The best toys out there!</h2>
                                              </div>
-                                             <p className=' fs-6 col-lg-8 fw-semibold mx-auto px-5'>Arts and crafts toys are playthings designed to foster creativity, imagination, and hands-on artistic expression in children.</p>
+                                             <p className=' fs-6 col-lg-8 fw-semibold mx-auto px-5'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit eos commodi soluta recusandae quam, ut quos eum repellat laudantium ullam!</p>
 
                                              <div className='mt-3'>
                                                   <button type="button" className="btn btn-danger me-3 mb-2">Arts More</button>
-                                                  <button type="button" className="btn text-light btn-info mb-2">Crafts Project</button>
+                                                  <button type="button" className="btn text-light btn-warning mb-2">Toys for Kids</button>
                                              </div>
                                         </div>
                                    </div>

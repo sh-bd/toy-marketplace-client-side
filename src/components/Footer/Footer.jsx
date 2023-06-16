@@ -121,11 +121,8 @@ const Footer = () => {
 
 
                <div className="container mt-3">
-                    <p className="text-left font-bold ">
+                    <p className="text-center font-bold ">
                          <Link className='xyz text-danger fw-semibold' to='/'>&copy; PH Toys Store</Link>
-                         <span className="float-end">
-                              <Link className='xyz text-danger fw-semibold ' onClick={scrollToTop}>Scroll to top</Link>
-                         </span>
                     </p>
                </div>
           </div>

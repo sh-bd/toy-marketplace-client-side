@@ -1,14 +1,13 @@
 import React, { useContext } from 'react';
-import './Header.css';
+import { Navbar } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
-import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 import ActiveLink from '../ActiveLink/ActiveLink';
-import { Navbar } from 'react-bootstrap';
-import logo from '../../assets/logo.png'
+import './Header.css';
 
 const Header = () => {
      const { user, logOut } = useContext(AuthContext)

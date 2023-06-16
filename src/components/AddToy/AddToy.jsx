@@ -70,9 +70,9 @@ const AddToy = () => {
                          <div className=' row px-4 pt-4'>
                               <div className="mb-2">
                                    <select className="form-select py-2" name='category' aria-label="Default select example" required>
-                                        <option >Water Toys</option>
-                                        <option value="Scientific Toys">Scientific Toys</option>
-                                        <option value="Entertaining Toys">Entertaining Toys</option>
+                                        <option >Math Learning Toys</option>
+                                        <option value="Science Toys">Science Toys</option>
+                                        <option value="Engineering Toys">Engineering Toys</option>
                                    </select>
 
                               </div>

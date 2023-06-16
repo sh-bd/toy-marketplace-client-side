@@ -8,29 +8,29 @@ const Gallery = () => {
                <div className="row my-4  no-gutter">
                     <div className="col-lg-4 mb-3 aos-init aos-animate" data-aos="fade-right"
                          data-aos-offset="300" data-aos-easing="ease-in-sine">
-                         <img src="https://static.ajkerdeal.com/images/deals/703981610225934/1_dancing-cactus-singing-plush-children-toy.webp" alt="" className=' img-fluid rounded w-100  galleryImg' />
+                         <img src="https://cdn11.bigcommerce.com/s-ufhcuzfxw9/images/stencil/1280x1280/products/14680/14011/CE-KIT01__96780.1599845733.jpg?c=2" alt="" className=' img-fluid rounded w-100  galleryImg' />
                     </div>
                     <div className="col-lg-4 mb-3 aos-init aos-animate" data-aos="fade-up"
                          data-aos-anchor-placement="center-bottom" >
-                         <img src="https://static.ajkerdeal.com/images/deals/140253001185504/1_fashion-childrens-mini-electronic-organ-plastic-kids-educational-toy-early-instrument-gift-musical.webp" alt="" className=' img-fluid rounded w-100  galleryImg' />
+                         <img src="https://www.learningresources.com/media/catalog/product/9/4/9463-stem-pixel-art-challenge_heo_sh-1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:" alt="" className=' img-fluid rounded w-100  galleryImg' />
                     </div>
                     <div className="col-lg-4 aos-init aos-animate" data-aos="fade-left"
                          data-aos-offset="300" data-aos-easing="ease-in-sine">
-                         <img src="https://static.ajkerdeal.com/images/deals/750092105132610/1_kids-bathtub-toy-cartoon-crab-creative-wind-up-toy-water-toy-bathing-toycartoon-crab-children-swimming-beach-bath-toyscute-crab-toydhaka-shopping-z.webp" alt="" className=' img-fluid rounded w-100  galleryImg' />
+                         <img src="https://www.learningresources.com/media/catalog/product/3/7/3799_ww_boards_sh-2_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:" alt="" className=' img-fluid rounded w-100  galleryImg' />
                     </div>
                </div>
                <div className="row  no-gutter">
                     <div className="col-lg-4 mb-3 aos-init aos-animate" data-aos="fade-right"
                          data-aos-offset="300" data-aos-easing="ease-in-sine">
-                         <img src="https://static.ajkerdeal.com/images/deals/750092105134137/1_dance-robot-musical-smart-electric-walking-dancing-robot-toys-with-music-light-gift-for-kidsdanceing-robotrobot-cardhaka-shopping-zone.webp" alt="" className=' img-fluid rounded w-100  galleryImg' />
+                         <img src="https://cdn.filestackcontent.com/WLOdNCOSjiXwqHvdG8Kw" alt="" className=' img-fluid rounded w-100  galleryImg' />
                     </div>
                     <div className="col-lg-4 mb-3 aos-init aos-animate" data-aos="fade-up"
                          data-aos-anchor-placement="center-bottom">
-                         <img src="https://static.ajkerdeal.com/images/deals/703980810222201/1_1200x-biological-microscope-educational-toys-for-kids.webp" alt="" className=' img-fluid rounded w-100  galleryImg' />
+                         <img src="https://cdn.filestackcontent.com/CEdX87Sr6MmO3q87l8Jg" alt="" className=' img-fluid rounded w-100  galleryImg' />
                     </div>
                     <div className="col-lg-4 aos-init aos-animate" data-aos="fade-left"
                          data-aos-offset="300" data-aos-easing="ease-in-sine">
-                         <img src="https://static.ajkerdeal.com/images/deals/443802404222723/1.jpg" alt="" className=' img-fluid rounded w-100  galleryImg' />
+                         <img src="https://cdn.filestackcontent.com/QUS9sfsxQaO475Lf8u7U" alt="" className=' img-fluid rounded w-100  galleryImg' />
                     </div>
 
                </div>

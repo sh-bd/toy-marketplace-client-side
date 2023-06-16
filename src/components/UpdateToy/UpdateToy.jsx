@@ -78,9 +78,9 @@ const UpdateToy = () => {
                          <div className=' row px-4 pt-4'>
                               <div className="mb-2">
                                    <select className="form-select py-2" name='category' aria-label="Default select example" defaultValue={category} required>
-                                        <option>Water Toys</option>
-                                        <option value="Scientific Toys">Scientific Toys</option>
-                                        <option value="Entertaining Toys">Entertaining Toys</option>
+                                        <option>Math Learning Toys</option>
+                                        <option value="Science Kits">Science Kits</option>
+                                        <option value="Engineering Kits">Engineering Kits</option>
                                    </select>
                               </div>
                          </div>

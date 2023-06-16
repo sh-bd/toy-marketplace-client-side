@@ -13,9 +13,9 @@ const ReactTab = () => {
           fetch('https://toy-marketplace-server-side-sh4mim.vercel.app/toy')
                .then(res => res.json())
                .then(data => {
-                    const Tab1Data = data.filter(data => data.category === "Water Toys")
-                    const Tab2Data = data.filter(data => data.category === "Scientific Toys")
-                    const Tab3Data = data.filter(data => data.category === "Entertaining Toys")
+                    const Tab1Data = data.filter(data => data.category === "Math Learning Toys")
+                    const Tab2Data = data.filter(data => data.category === "Science Kits")
+                    const Tab3Data = data.filter(data => data.category === "Engineering Kits")
                     setTab1Data(Tab1Data)
                     setTab2Data(Tab2Data)
                     setTab3Data(Tab3Data)
@@ -34,19 +34,19 @@ const ReactTab = () => {
                          className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
                          onClick={() => toggleTab(1)}
                     >
-                         Water Toys
+                         Math Learning Toys
                     </button>
                     <button
                          className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
                          onClick={() => toggleTab(2)}
                     >
-                         Scientific Toys
+                         Science Kits
                     </button>
                     <button
                          className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
                          onClick={() => toggleTab(3)}
                     >
-                         Entertaining Toys
+                         Engineering Kits
                     </button>
                </div>
 
@@ -54,7 +54,7 @@ const ReactTab = () => {
                     <div
                          className={toggleState === 1 ? "content  active-content" : "content"}
                     >
-                         <h1 className='my-4 text-center'>Water Toys</h1>
+                         <h1 className='my-4 text-center'>Math Learning Toys</h1>
                          {
                               isLoading && <div className="text-center my-5">
                                    <div className="spinner-border" role="status">
@@ -75,7 +75,7 @@ const ReactTab = () => {
                     <div
                          className={toggleState === 2 ? "content  active-content" : "content"}
                     >
-                         <h1 className='my-4 text-center'>Scientific Toys</h1>
+                         <h1 className='my-4 text-center'>Science Kits</h1>
                          {
                               isLoading && <div className="text-center my-5">
                                    <div className="spinner-border" role="status">
@@ -96,7 +96,7 @@ const ReactTab = () => {
                     <div
                          className={toggleState === 3 ? "content  active-content" : "content"}
                     >
-                         <h1 className='my-4 text-center'>Entertaining Toys</h1>
+                         <h1 className='my-4 text-center'>Engineering Kits</h1>
                          {
                               isLoading && <div className="text-center my-5">
                                    <div className="spinner-border" role="status">

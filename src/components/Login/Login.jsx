@@ -3,10 +3,11 @@ import { Button, Form } from 'react-bootstrap';
 import { AiFillEye, AiFillEyeInvisible, AiOutlineGithub } from 'react-icons/ai';
 import { ImGoogle2 } from 'react-icons/im';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 import './Login.css';
+import Swal from 'sweetalert2';
 
 
 const Login = () => {
@@ -129,7 +130,7 @@ const Login = () => {
 
      // handleGitHubSignIn part start
      const handleGitHubSignIn = () => {
-          githubSingIn()
+          githubSignIn()
                .then((result) => {
                     const user = result.user;
                     console.log(user);

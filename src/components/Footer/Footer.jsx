@@ -26,7 +26,7 @@ const Footer = () => {
                                         <div className="sm">
                                              <h2 className="text-warning mt-4 text-center">Contact Us</h2>
                                         </div>
-                                        <p className="text-justify mt-4 text-light ms-2">Thanks for visiting the best kit store in the country!</p>
+                                        <p className="text-justify mt-4 text-light ms-2">Thanks for visiting the best toys store in the country!</p>
                                         <ul className="list-unstyled ms-2">
                                              <li>
                                                   <p className='d-flex align-content-center'>

@@ -4,7 +4,7 @@ import "./ALLToys.css";
 import SubAllToys from './SubAllToys/SubAllToys';
 
 const AllToys = () => {
-     useTitle('All Kits')
+     useTitle('All Toys')
      const [jsonData, setJsonData] = useState([]);
      const [isLoading, setIsLoading] = useState(true);
      const [searchText, setSearchText] = useState('')
